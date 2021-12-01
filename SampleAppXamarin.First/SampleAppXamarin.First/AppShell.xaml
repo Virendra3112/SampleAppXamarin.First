@@ -1,12 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleAppXamarin.First.AppShell">
-    <ContentPage.Content>
+             x:Class="SampleAppXamarin.First.AppShell"     
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            ios:Page.UseSafeArea="true"
+            FlyoutBackgroundColor="White"
+            FlyoutHeaderBehavior="Scroll"
+            FlyoutVerticalScrollMode="Auto"
+            Shell.FlyoutBehavior="Flyout"
+            Shell.NavBarIsVisible="True"
+            Shell.TabBarIsVisible="True"
+            mc:Ignorable="d">
+
+    <Shell.FlyoutHeader>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Header"/>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </Shell.FlyoutHeader>
+
+    <MenuItem
+        Command="{Binding FirstCommand}"
+        CommandParameter="home"
+        IconImageSource="icon.png"
+        Text="Home" />
+
+    <MenuItem
+        Command="{Binding SecondCommand}"
+        CommandParameter="Second"
+        IconImageSource="icon.png"
+        Text="Home" />
+
+
+</Shell>
