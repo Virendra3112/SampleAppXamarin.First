@@ -6,6 +6,41 @@ namespace SampleAppXamarin.First.ViewModels
 {
     public class BaseViewModel: IDisposable
     {
+        bool isBusy;
+        public bool IsBusy
+        {
+            get
+            {
+                return isBusy;
+            }
+            set
+            {
+                isBusy = value;
+                ShowLoading(value);
+                RaisePropertyChanged();
+            }
+        }
+
+        private void ShowLoading(bool value)
+        {
+            //try
+            //{
+            //    if (value)
+            //        Device.BeginInvokeOnMainThread(() =>
+            //        {
+            //            Acr.UserDialogs.UserDialogs.Instance.ShowLoading("Loading...", Acr.UserDialogs.MaskType.Black);
+            //        });
+
+            //    else
+            //        Device.BeginInvokeOnMainThread(() =>
+            //        {
+            //            Acr.UserDialogs.UserDialogs.Instance.HideLoading();
+            //        });
+            //}
+            //catch (Exception ex)
+            //{
+            //}
+        }
 
 
         #region INotifyPropertyChanged implementation
