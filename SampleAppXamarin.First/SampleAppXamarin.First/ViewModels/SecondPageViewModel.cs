@@ -4,7 +4,13 @@ using System.Text;
 
 namespace SampleAppXamarin.First.ViewModels
 {
-    class SecondPageViewModel
+
+    public class SecondPageViewModel : BaseViewModel
     {
+
+        public SecondPageViewModel()
+        {
+
+        }
     }
 }

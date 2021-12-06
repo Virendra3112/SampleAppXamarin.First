@@ -4,7 +4,11 @@ using System.Text;
 
 namespace SampleAppXamarin.First.ViewModels
 {
-    class HomePageViewModel
+    public class HomePageViewModel : BaseViewModel
     {
+        public HomePageViewModel()
+        {
+
+        }
     }
 }
