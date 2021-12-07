@@ -12,9 +12,32 @@
             Shell.FlyoutBehavior="Flyout"
             Shell.NavBarIsVisible="True"
             Shell.TabBarIsVisible="True"
-            mc:Ignorable="d">
+            mc:Ignorable="d"
+            xmlns:views="clr-namespace:SampleAppXamarin.First.Views"
 
-    <Shell.FlyoutHeader>
+       >
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <!--<Tab Title="Test Tab title"
+             Icon="icon.png">
+            <ShellContent Title="Home"
+                          Icon="icon.png"
+                          ContentTemplate="{DataTemplate views:HomePage}" />
+            <ShellContent Title="Second"
+                          Icon="icon.png"
+                          ContentTemplate="{DataTemplate views:SecondPage}" />
+        </Tab>-->
+
+        <ShellContent Title="Home Tab"
+                      Icon="icon.png"
+                      ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Second Page"
+                      Icon="icon.png"
+                      ContentTemplate="{DataTemplate views:SecondPage}" />
+
+    </FlyoutItem>
+
+    <!--<Shell.FlyoutHeader>
         <StackLayout>
             <Label Text="Header"/>
         </StackLayout>
@@ -30,7 +53,7 @@
         Command="{Binding SecondCommand}"
         CommandParameter="Second"
         IconImageSource="icon.png"
-        Text="Home" />
+        Text="Home" />-->
 
 
 </Shell>
