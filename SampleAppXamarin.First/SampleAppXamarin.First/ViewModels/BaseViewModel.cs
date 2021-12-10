@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace SampleAppXamarin.First.ViewModels
 {
-    public class BaseViewModel: IDisposable
+    public class BaseViewModel : IDisposable
     {
         bool isBusy;
         public bool IsBusy
