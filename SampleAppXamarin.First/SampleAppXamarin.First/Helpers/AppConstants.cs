@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SampleAppXamarin.First.Helpers
+﻿namespace SampleAppXamarin.First.Helpers
 {
-    public class AppConstants
+    public static class AppConstants
     {
+        public static string AppVersion { get; set; }
+        public static bool IsLoggedIn { get; set; }
     }
 }
